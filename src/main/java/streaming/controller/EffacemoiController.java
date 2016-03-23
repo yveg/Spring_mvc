@@ -19,6 +19,8 @@ public class EffacemoiController {
     @RequestMapping(value = "/effacemoi", method = RequestMethod.GET)
     public String effaceMoi(){
         
+        System.out.println("Passe par ici");
+        
         return "effacemoi";
     }
 }
