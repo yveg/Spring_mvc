@@ -5,14 +5,13 @@
  */
 package streaming.service;
 
-import java.io.Serializable;
 import org.springframework.data.repository.CrudRepository;
-import streaming.entity.Effacemoi;
+import streaming.entity.Film;
 
 /**
  *
  * @author tom
  */
-public interface EffacemoiCrudService extends CrudRepository<Effacemoi, Long>{
+public interface FilmCrudService extends CrudRepository<Film, Long>{
     
 }

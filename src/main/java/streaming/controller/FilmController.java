@@ -6,21 +6,26 @@
 package streaming.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import streaming.entity.Film;
 
 /**
  *
  * @author tom
  */
 @Controller
-public class EffacemoiController {
+@RequestMapping("/film")
+public class FilmController {
     
-    @RequestMapping(value = "/effacemoi", method = RequestMethod.GET)
-    public String effaceMoi(){
+    @RequestMapping(value="find/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public Film findById( @PathVariable("id") long id){
         
-        System.out.println("Passe par ici");
+        Film f = new Film(1L, "Karate Kid", "blabla", 1989L, null);
         
-        return "effacemoi";
+        return f;
     }
 }
